@@ -1,5 +1,5 @@
 setup :
 	pip install -r requirements.txt
 
-dinorun:
+play:
 	./dinorun.py
