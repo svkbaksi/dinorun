@@ -2,4 +2,4 @@ setup :
 	pip install -r requirements.txt
 
 play:
-	./dinorun.py
+	python dinorun.py
