@@ -4,13 +4,15 @@ import mss
 import numpy as np
 from os import system
 
-monitor = {"top": 335, "left": 100, "width": 100, "height": 55}
+object_mon = {"top": 335, "left": 189, "width": 200, "height": 80}
+
 with mss.mss() as sct:
 	while True:
-		screen = np.array(sct.grab(monitor))
-		image  = cv2.bitwise_not(cv2.cvtColor(screen, cv2.COLOR_BGRA2GRAY))
-		signal = image.sum()
+		image = cv2.cvtColor(np.array(sct.grab(object_mon)), cv2.COLOR_BGRA2GRAY)
 		
-		if (signal>70000) :
+		if ( image.sum() > 250000 ) :
+			image = cv2.bitwise_not(image)
+					
+		if ( image.sum() > 70000 ) :
 			time.sleep(0.1)
 			system("xdotool key Up")
