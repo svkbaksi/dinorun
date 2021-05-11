@@ -7,8 +7,6 @@
 
 
 ## Steps to run.
-1. to perform all setups.
-	"pip install -r requirements.txt
+1. run make setup to perform all setups.
 2. run make play to start the game.
-	"python dinorun.py
 3. start chrome and goto [chrome://dino](chrome://dino)
