@@ -1,14 +1,22 @@
 # dinorun
-##### Play Chrome's Dino game using Python & OpenCV
+#### A different way to play Chrome's dinosaur game.
 
+## What is it?
+A python script that uses opencv and multiple-screenshot module to capture the screen, check for obstructions in an windowed area and emulate keypress.
 
-## Demo
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/0uoFlpgAE3U/0.jpg)](http://www.youtube.com/watch?v=0uoFlpgAE3U)
+## How to run?
+* Install all dependencies.
+```
+pip install -r requirements.txt
+```
+* Start the script.
+```
+python dinorun.py
+```
+Note : It is recommended to use sleep command along with script invocation. This will give the required time to setup windows. 
+```
+sleep 5s; python dinorun.py
+``` 
+* Start chrome and goto [chrome://dino](chrome://dino).
 
-
-## Steps to run.
-1. to perform all setups.
-	"pip install -r requirements.txt
-2. run make play to start the game.
-	"python dinorun.py
-3. start chrome and goto [chrome://dino](chrome://dino)
+Note : Chrome should the active tab. Maximise Chrome and enter full screen. The window is caliberated for full screen performance with screen resolution 1366x768.
